@@ -20,8 +20,116 @@ header, footer{
 }
 header{
     padding-top: 1px;
-    height: 220px;
+    height: 210px;
 }
+
+hr{
+    color: darkgreen;
+    border-color: darkgreen;
+    border-width: 4px;
+}
+
+
+main{
+    max-width: 1024px;
+    margin: 0 auto; /* Esto lo centra*/
+}
+.container{
+    width: 100%; 
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+}
+.container > div{ /* > va por los hijos directos*/
+    height: 120px;
+    width: 25%;
+    float: left;
+    border: solid 3px darkgreen;
+    box-sizing: border-box;
+    border-top: 2px;
+}
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Seccion de Contacto */
+.contacto{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contacto > div{
+    margin-top: 0px;
+    height: 75px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    border: double 3px darkgreen;
+}
+.contacto::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width:1024px){
+    .container > div{
+        width: 50%;
+    }
+    .contacto >div{
+        width: 50%;
+    }
+}
+@media screen and (max-width:768px){
+    .container > div{
+        width: 75%;
+        
+    }
+    .container{
+        margin-left: 12%;
+        position: relative;
+    }
+    .contacto > div{
+        width: 75%;
+        
+    }
+    .contacto{
+        margin-left: 12%;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+
+#foto{
+    position: absolute;
+    font-weight: 900;
+    font-style: italic;
+    max-width: 1%;   
+    
+}
+
+#idImg{
+    border-color: green;
+    border-width: 3px;
+    border-radius: 20px;
+    border-style: groove;
+
+    margin-left: 1%;
+    
+
+    max-width: 100%;
+    max-height: 90%;
+}
+
+
 footer{
     padding-top: 20px;
 }
@@ -30,9 +138,7 @@ footer{
     text-align: justify;
     font-size: small;
 }
-#container{
-    height: 600px;
-}
+
 #datos{
     left: 50%;
 }
