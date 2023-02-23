@@ -1,0 +1,61 @@
+@import "colores";
+@import "mixins";
+main{
+    @include main;
+}
+.container{
+    @include container;
+    &>div{
+        height: 120px;
+        width: 25%;
+        float: left;
+        border: solid 3px $color-secundario;
+        box-sizing: border-box;
+        border-top: 2px;
+    }
+    &::after{
+        @include after
+    }
+}
+/*Seccion de Contacto */
+.contacto{
+    @include container;
+    &> div{
+        margin-top: 0px;
+        height: 75px;
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+        border: double 3px $color-secundario;
+    }
+    &::after{
+        @include after
+    }
+}
+
+@include tablet{
+    .container >div{
+        width: 50%;
+    }
+    .contacto >div{
+        width: 50%;
+    }
+}
+@include mobile{
+    .container > div{
+            width: 75%;
+    }
+    .container{
+        margin-left: 12%;
+        position: relative;
+    }
+    .contacto > div{
+        width: 75%;
+    } 
+
+    .contacto{
+        margin-left: 12%;
+        position: relative;
+    }
+}
