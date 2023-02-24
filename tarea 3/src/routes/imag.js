@@ -6,14 +6,15 @@ router.get('',function(req,res){
 });
 
 router.post('',function(req,res){
-    res.send('');
+    res.send('Imagen creada');
 });
 
 router.put('/:id',function(req,res){
-    res.send('');
+    res.send('Imagen actualizada');
 });
-router.get('',function(req,res){
-    res.send('');
+router.get('/:id',function(req,res){
+    const id = req.params.id;
+    res.send('Imagen con id'+id);
 });
 
 

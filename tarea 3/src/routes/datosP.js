@@ -2,17 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 router.get('',function(req,res){
-    res.render('datos');
+    res.render('Mis datos');
 });
 router.post('',function(req,res){
-    res.send('');
+    res.send('Dato creado');
 });
 
 router.put('/:id',function(req,res){
-    res.send('');
+    res.send('Dato actualizado');
 });
-router.get('',function(req,res){
-    res.send('');
+router.get('/:id',function(req,res){
+    const id = req.params.id;
+    res.send('dato con id:'+id);
 });
 
 

@@ -2,17 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 router.get('',function(req,res){
-    res.render('formulario');
+    res.render('Mi contacto');
 });
 router.post('',function(req,res){
-    res.send('');
+    res.send('contacto Creado');
 });
 
 router.put('/:id',function(req,res){
-    res.send('');
+    res.send('Contacto actualizado');
 });
-router.get('',function(req,res){
-    res.send('');
+router.get('/:id',function(req,res){
+    const id = req.params.id;
+    res.send('Contacto con id'+id);
 });
 
 
