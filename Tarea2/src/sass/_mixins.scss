@@ -1,0 +1,53 @@
+@import "colores";
+@mixin nomargin{
+    margin: 0;
+    padding: 0;
+    
+}
+@mixin container{
+    width: 100%; 
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+@mixin main{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+@mixin after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@mixin tablet{
+    @media screen and (max-width:1024px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+@mixin foto{
+    position: absolute;
+    font-weight: 900;
+    font-style: italic;
+    max-width: 1%;   
+}
+@mixin idImg{
+    border-color: $color-secundario;
+    border-width: 3px;
+    border-radius: 20px;
+    border-style: groove;
+    margin-left: 1%;
+    max-width: 100%;
+    max-height: 90%;
+}
+@mixin datosGeneral{
+    padding-left: 10px;
+    text-align: justify;
+    font-size: small;
+}
