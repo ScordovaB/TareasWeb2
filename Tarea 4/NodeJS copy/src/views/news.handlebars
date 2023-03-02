@@ -1,0 +1,20 @@
+<hr>
+<h2>Noticias:</h2>
+
+<form action="/noticias" method="get">
+  <label for="noticias">Buscar:</label>
+  <input type="text" id="noticias" name="q" placeholder="Busca noticia...">
+  <button type="submit">Search</button>
+</form>
+<ul>
+    {{#each noticias.articles}}
+    <li>Autor:{{this.author}} </li>
+    <li>Título:{{this.title}}</li>
+    <ul>
+        <li>Descripción:{{this.description}}</li>
+        <li>Url:{{this.url}}</li>
+    </ul>
+    
+    
+    {{/each}}
+</ul>
