@@ -28,4 +28,8 @@ p{
     font-weight: bolder;
     display: inline;
 }
+img{
+  height: 100px;
+  width: auto;
+}
   
