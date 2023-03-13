@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+body {
+  height: 100%;
+}
+
+header, footer {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  font-style: normal;
+  text-align: center;
+}
+
+header {
+  padding-top: 1px;
+  height: 110px;
+}
+
+hr {
+  color: darkgreen;
+  border-color: darkgreen;
+  border-width: 4px;
+}
+
+.menu {
+  display: inline;
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+
+.home {
+  padding-left: 100px;
+}
+
+a:hover {
+  color: darkgreen;
+}
+
+#foto {
+  position: absolute;
+  font-weight: 900;
+  font-style: italic;
+  max-width: 1%;
+}
+
+#idImg {
+  border-color: darkgreen;
+  border-width: 3px;
+  border-radius: 20px;
+  border-style: groove;
+  margin-left: 1%;
+  max-width: 100%;
+  max-height: 90%;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+.datosGeneral {
+  padding-left: 10px;
+  text-align: justify;
+  font-size: small;
+}
+
+/*# sourceMappingURL=estilos.css.map */

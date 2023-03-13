@@ -1,0 +1,71 @@
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.container > div {
+  height: 120px;
+  width: 25%;
+  float: left;
+  border: solid 3px darkgreen;
+  box-sizing: border-box;
+  border-top: 2px;
+}
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Seccion de Contacto */
+.contacto {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.contacto > div {
+  margin-top: 0px;
+  height: 75px;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  border: double 3px darkgreen;
+}
+.contacto::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1024px) {
+  .container > div {
+    width: 50%;
+  }
+  .contacto > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container > div {
+    width: 75%;
+  }
+  .container {
+    margin-left: 12%;
+    position: relative;
+  }
+  .contacto > div {
+    width: 75%;
+  }
+  .contacto {
+    margin-left: 12%;
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=grid.css.map */

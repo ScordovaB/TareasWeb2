@@ -1,0 +1,21 @@
+{
+  "name": "tarea-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "styles": "sass src/sass:dist/css",
+    "dev": "nodemon ."
+  },
+  "author": "Santiago Cordova",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "sass": "^1.58.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
