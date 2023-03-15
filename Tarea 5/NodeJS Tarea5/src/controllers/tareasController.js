@@ -5,15 +5,16 @@ const Tarea = require('../models/tarea'); //Este es modelo "Tarea";
 
 const tareasController={
     listarT: function(req,res){
-        let id = req.query.id;
+        //let id = req.query.id;
         //console.log(id + " <- este fue el id");
-        //como es Promesa, poner su then y catch
+
         Tarea.find({}).lean() //buscar por filtros adentro del parentesis
-            //.lean() lo prepara para mandar un JSON y poder recibir los datos sin problema y mandarlos a front html(handlebars en este caso)
+            //.lean() lo prepara para mandar un JSON y poder recibir los datos sin problema y mandarlos a front html(handlebars)
             // y es funcion de mongoose
             .then(response=>{
-                console.log('respuesta', response);
-                res.render('tareas',{tareas: response});
+                //console.log('respuesta', response);
+                //res.render('tareas',{tareas: response});
+                res.status(200).json(response);
             })     
             .catch(error=>{
                 res.status(400).send('Error al ListarT'); //EN ANGULAR, regresamos UN OBJETO, no Texto
@@ -28,40 +29,52 @@ const tareasController={
             .then(response=>{
                 console.log("VerT ejectudo correctamente");
                 console.log(response);
-                res.status(200).send("Llego");
+                res.status(200).json(response);
             })
             .catch(error=>{
                 res.status(400).send('Error al verT');
             });
-    }/*,
+    },
     crearT: function(req,res){
-        Tarea.create(req.body,(err,doc)=>{
-            if(err){
-                console.log(err);
-            }else{
-                console.log(doc);
-            }
+
+        const newTarea= new Tarea({
+            titulo:req.body.titulo,
+            description: req.body.description,
+            status: req.body.status
+        })
+        newTarea.save()
+        .then(response=>{
+            console.log("crearT ejectudo correctamente");
+            console.log(response);
+            res.status(200).json(response);
+        })
+        .catch(error=>{
+            res.status(400).send('Error al crearT');
         });
 
     },
     actualizarT: function(req,res){
-        Tarea.findByIdAndUpdate(req.params.id,req.body,{ new: true },(err,doc)=>{
-            if(err){
-                console.log(err);
-            }else{
-                console.log(doc);
-            }
+        Tarea.findByIdAndUpdate(req.params.id,req.body,{ new: true })
+        .then(response=>{
+            console.log("actualizarT ejectudo correctamente");
+            console.log(response);
+            res.status(200).json(response);
+        })
+        .catch(error=>{
+            res.status(400).send('Error al actualizarT');
         });
     },
     eliminarT: function(req,res){
-        Tarea.findByIdAndDelete(req.params.id,(err,doc)=>{
-            if(err){
-                console.log(err);
-            }else{
-                console.log(doc);
-            } 
+        Tarea.findByIdAndDelete({_id:req.params.id})
+        .then(response=>{
+            console.log("eliminarT ejectudo correctamente");
+            console.log(response);
+            res.status(200).json(response);
+        })
+        .catch(error=>{
+            res.status(400).send('Error al eliminarT');
         });
-    }*/
+    }
     
 }
 
