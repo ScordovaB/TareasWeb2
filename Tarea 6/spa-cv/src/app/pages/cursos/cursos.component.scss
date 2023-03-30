@@ -1,0 +1,42 @@
+.datosCentro{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+
+    border: 10px;
+    border-color: black;
+    padding: .5em;
+    background: rgb(7, 63, 7);
+    border-radius: 10px;
+
+}
+.data{
+    width: 100%;
+    background-color: white;
+    padding: .5em;
+    margin-right: .25em;
+    font-weight: bolder;
+    text-align: left;
+    .titulo{
+        text-align: center;
+        font-size: x-large;
+    }
+    hr{
+        background-color: rgb(7, 63, 7);
+        height: 5px;
+    }
+    .subTitulo{
+        font-size: large;
+    }
+    .lightHr{
+        height: 2px;
+    }
+    
+
+
+}
