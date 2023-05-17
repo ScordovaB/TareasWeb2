@@ -1,0 +1,1 @@
+MONGO_URL = mongodb+srv://TU USUARIO:TU CONTRASEÑA@cluster0.wsbl3sx.mongodb.net/?retryWrites=true&w=majority
